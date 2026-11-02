@@ -1,0 +1,48 @@
+/* DigitalClock */
+.ds-dclock {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.ds-dclock__time {
+  font-family: var(--ds-font-display);
+  font-size: clamp(2.25rem, 4vw, 3rem);
+  font-weight: var(--ds-weight-regular);
+  line-height: 1;
+  letter-spacing: 0.02em;
+  font-variant-numeric: tabular-nums;
+}
+.ds-dclock__colon { margin: 0 0.12em; position: relative; top: -0.06em; }
+.ds-dclock__date {
+  margin-top: var(--ds-space-2);
+  font-size: var(--ds-text-md);
+  color: var(--ds-text-secondary);
+  letter-spacing: 0.04em;
+}
+.ds-dclock__meter { width: 100%; margin-top: var(--ds-space-4); }
+
+/* AnalogClock — every size below is a % of the box so it scales with `size` */
+.ds-aclock {
+  position: relative;
+  flex: none;
+}
+.ds-aclock__face,
+.ds-aclock__hub {
+  position: absolute;
+  border-radius: 50%;
+  background: var(--ds-bg-surface);
+}
+.ds-aclock__face { inset: 13%; box-shadow: var(--ds-shadow-2); }
+.ds-aclock__hub { inset: 35%; box-shadow: var(--ds-shadow-control), 0 0 0 1px var(--ds-border-subtle); }
+.ds-aclock__svg { position: absolute; inset: 0; width: 100%; height: 100%; overflow: visible; }
+.ds-aclock__ring { fill: none; stroke: var(--ds-bg-accent); stroke-width: 2.4; }
+.ds-aclock__tick { stroke: var(--ds-bg-accent); stroke-width: 1.2; stroke-linecap: round; }
+.ds-aclock__tick--major { stroke-width: 2.4; }
+.ds-aclock__hand { stroke-linecap: round; }
+.ds-aclock__hand--hour { stroke: var(--ds-bg-accent); stroke-width: 5; }
+.ds-aclock__hand--minute { stroke: var(--ds-bg-accent); stroke-width: 3; }
+.ds-aclock__hand--second { stroke: var(--ds-bg-highlight); stroke-width: 2; }
+.ds-aclock__pin { fill: var(--ds-bg-accent); }
+.ds-aclock__pin-dot { fill: var(--ds-bg-surface); }
+.ds-aclock__knob { fill: var(--ds-bg-highlight); stroke: var(--ds-bg-accent); stroke-width: 2; }

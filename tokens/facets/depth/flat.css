@@ -1,0 +1,26 @@
+/* Depth · flat — no shadows; structure from hairlines (derived, not from a ref).
+   Remix axis: pairs any palette with a print-like, border-only look. */
+[data-depth="flat"] {
+  --hairline: 0 0 0 1px var(--ds-border-default);
+
+  --ds-shadow-0: var(--hairline);
+  --ds-shadow-1: var(--hairline);
+  --ds-shadow-2: var(--hairline);
+  --ds-shadow-3: 0 0 0 1px var(--ds-text-primary);
+  --ds-shadow-frame: var(--hairline);
+  --ds-shadow-accent: none;
+
+  --ds-shadow-inset: inset 0 0 0 1px var(--ds-border-default);
+  --ds-shadow-inset-sm: inset 0 0 0 1px var(--ds-border-default);
+  --ds-shadow-control: var(--hairline);
+  --ds-shadow-tile: var(--hairline);
+  --ds-shadow-selected: none;
+  --ds-track-size: 4px;
+
+  --ds-rail-fill: var(--ds-bg-accent);
+  --ds-rail-fg: var(--ds-text-on-accent);
+  --ds-rail-active-bg: var(--ds-bg-surface);
+  --ds-rail-active-fg: var(--ds-text-accent);
+  --ds-rail-active-shadow: none;
+  --ds-rail-filter: none;
+}

@@ -1,0 +1,61 @@
+/* ==========================================================================
+   design-farm · base tokens
+   Scales every recipe shares. Facets (palette, depth, shape, type, density)
+   re-map the semantic --ds-* roles on top of this. Components read roles only.
+   ========================================================================== */
+
+:root {
+  /* ---- Type scale -------------------------------------------------------- */
+  --ds-text-2xs: 0.6875rem; /* 11 — meta, weekday labels, chip text */
+  --ds-text-xs: 0.75rem;    /* 12 — captions, durations, timestamps */
+  --ds-text-sm: 0.8125rem;  /* 13 — buttons, nav, secondary body */
+  --ds-text-md: 0.875rem;   /* 14 — body, list titles */
+  --ds-text-lg: 1rem;       /* 16 — item titles */
+  --ds-text-xl: 1.25rem;    /* 20 — card titles */
+  --ds-text-2xl: 1.625rem;  /* 26 — promo title */
+  --ds-text-display: 2.5rem;/* 40 — greeting */
+
+  --ds-leading-tight: 1.2;
+  --ds-leading-snug: 1.35;
+  --ds-leading-normal: 1.5;
+
+  --ds-weight-regular: 400;
+  --ds-weight-medium: 500;
+  --ds-weight-semibold: 600;
+  --ds-weight-bold: 700;
+
+  /* ---- Spacing: 4px grid × density (density facet sets the multiplier) --- */
+  --ds-density: 1;
+  --ds-space-0: 0;
+  --ds-space-1: calc(4px * var(--ds-density));
+  --ds-space-2: calc(8px * var(--ds-density));
+  --ds-space-3: calc(12px * var(--ds-density));
+  --ds-space-4: calc(16px * var(--ds-density));
+  --ds-space-5: calc(20px * var(--ds-density));
+  --ds-space-6: calc(24px * var(--ds-density));
+  --ds-space-7: calc(28px * var(--ds-density));
+  --ds-space-8: calc(32px * var(--ds-density));
+  --ds-space-10: calc(40px * var(--ds-density));
+  --ds-space-12: calc(48px * var(--ds-density));
+  --ds-space-16: calc(64px * var(--ds-density));
+
+  /* ---- Sizing ------------------------------------------------------------ */
+  --ds-control-sm: calc(28px * var(--ds-density));
+  --ds-control-md: calc(36px * var(--ds-density));
+  --ds-control-lg: calc(40px * var(--ds-density));
+  --ds-icon-sm: 14px;
+  --ds-icon-md: 18px;
+  --ds-icon-lg: 22px;
+  --ds-radius-pill: 999px;
+
+  /* ---- Motion / z -------------------------------------------------------- */
+  --ds-ease-out: cubic-bezier(0.22, 1, 0.36, 1);
+  --ds-duration-fast: 120ms;
+  --ds-duration-base: 200ms;
+  --ds-z-raised: 2;
+  --ds-z-floating: 10;
+
+  /* ---- Roles derived from other roles (resolve per recipe) --------------- */
+  --ds-focus-ring: 0 0 0 3px color-mix(in srgb, var(--ds-bg-accent) 35%, transparent);
+  --ds-bg-accent-soft-hover: color-mix(in srgb, var(--ds-bg-accent-soft), var(--ds-bg-accent) 14%);
+}

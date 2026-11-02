@@ -1,0 +1,5 @@
+/* Type · system — derived. No webfont; the platform UI face. */
+[data-type="system"] {
+  --ds-font-sans: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  --ds-font-display: var(--ds-font-sans);
+}

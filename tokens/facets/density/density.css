@@ -1,0 +1,5 @@
+/* Density — multiplies the 4px spacing grid and control heights (base.css). */
+:root,
+[data-density="comfortable"] { --ds-density: 1; }
+[data-density="compact"] { --ds-density: 0.8; }
+[data-density="roomy"] { --ds-density: 1.2; }

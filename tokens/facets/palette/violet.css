@@ -1,0 +1,51 @@
+/* Palette · violet — from refs/001-planify-dashboard (light).
+   Also the default palette when no data-palette is set. */
+:root,
+[data-palette="violet"] {
+  color-scheme: light;
+
+  --ds-bg-canvas: #e7e7f1;
+  --ds-bg-app: #f7f7fb;
+  --ds-bg-surface: #ffffff;
+  --ds-bg-sunken: #f2f2f8;
+  --ds-bg-hover: #f2f2f8;
+  --ds-bg-inverse: #15153b;
+  --ds-bg-accent: #7466ee;
+  --ds-bg-accent-hover: #6253df;
+  --ds-bg-accent-soft: #ebe9fd;
+  --ds-bg-accent-subtle: #f4f3fe;
+  --ds-bg-success: #5fbd97;
+  --ds-bg-success-soft: #def4eb;
+  --ds-bg-danger-soft: #fde7eb;
+
+  --ds-text-primary: #15153b;
+  --ds-text-secondary: #6c6d88;
+  --ds-text-muted: #a9aac0;
+  --ds-text-inverse: #ffffff;
+  --ds-text-on-accent: #ffffff;
+  --ds-text-accent: #7466ee;
+  --ds-text-success: #3fae80;
+  --ds-text-danger: #e14b66;
+
+  --ds-border-subtle: #eaeaf2;
+  --ds-border-default: #dcdce8;
+  --ds-border-dashed: #bdb6f7;
+  --ds-border-focus: #7466ee;
+
+  --ds-status-online: #3fae80;
+  --ds-status-new: #5fbd97;
+  --ds-status-attention: #f6b545;
+  --ds-chart-track: #eaeaf2;
+
+  --ds-bg-selected: var(--ds-bg-accent);
+  --ds-text-on-selected: var(--ds-text-on-accent);
+  --ds-bg-highlight: #f6b545;
+  --ds-text-on-highlight: #15153b;
+  --ds-ink: #15153b;
+  --ds-promo-cta-bg: #15153b;
+  --ds-promo-cta-fg: #ffffff;
+
+  /* Light physics consumed by depth facets */
+  --ds-light: rgba(255, 255, 255, 0.95);
+  --ds-shade: rgba(40, 36, 110, 0.55);
+}

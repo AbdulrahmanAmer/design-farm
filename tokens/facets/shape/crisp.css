@@ -1,0 +1,9 @@
+/* Shape · crisp — derived. Near-square corners for dense, technical UIs. */
+[data-shape="crisp"] {
+  --ds-radius-xs: 2px;
+  --ds-radius-sm: 3px;
+  --ds-radius-md: 4px;
+  --ds-radius-lg: 6px;
+  --ds-radius-xl: 8px;
+  --ds-radius-2xl: 12px;
+}

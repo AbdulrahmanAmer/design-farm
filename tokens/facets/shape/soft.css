@@ -1,0 +1,9 @@
+/* Shape · soft — refs/002. Larger, pebble-like corners. */
+[data-shape="soft"] {
+  --ds-radius-xs: 8px;
+  --ds-radius-sm: 10px;
+  --ds-radius-md: 14px;
+  --ds-radius-lg: 22px;
+  --ds-radius-xl: 32px;
+  --ds-radius-2xl: 40px;
+}

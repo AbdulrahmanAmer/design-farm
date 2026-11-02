@@ -1,0 +1,49 @@
+/* Palette · cobalt-signal — from refs/002-soft-widgets.
+   Cool grey base, cobalt accent, signal-yellow selection. */
+[data-palette="cobalt-signal"] {
+  color-scheme: light;
+
+  --ds-bg-canvas: #e0e1e7;
+  --ds-bg-app: #e5e6eb;
+  --ds-bg-surface: #eceef2;
+  --ds-bg-sunken: #e1e2e8;
+  --ds-bg-hover: #dfe0e6;
+  --ds-bg-inverse: #0f2a9a;
+  --ds-bg-accent: #0f2a9a;
+  --ds-bg-accent-hover: #0b2180;
+  --ds-bg-accent-soft: #d8dcec;
+  --ds-bg-accent-subtle: #e5e6eb;
+  --ds-bg-success: #3e9c7a;
+  --ds-bg-success-soft: #d5e6df;
+  --ds-bg-danger-soft: #f0d9de;
+
+  --ds-text-primary: #16171c;
+  --ds-text-secondary: #4b4d58;
+  --ds-text-muted: #8a8c98;
+  --ds-text-inverse: #ffffff;
+  --ds-text-on-accent: #ffffff;
+  --ds-text-accent: #0f2a9a;
+  --ds-text-success: #2f8a68;
+  --ds-text-danger: #c7384f;
+
+  --ds-border-subtle: rgba(22, 23, 28, 0.05);
+  --ds-border-default: rgba(22, 23, 28, 0.1);
+  --ds-border-dashed: #b4b9cf;
+  --ds-border-focus: #0f2a9a;
+
+  --ds-status-online: #2f8a68;
+  --ds-status-new: #3e9c7a;
+  --ds-status-attention: #f2c11d;
+  --ds-chart-track: #e1e2e8;
+
+  --ds-bg-selected: #f2c11d;
+  --ds-text-on-selected: #16171c;
+  --ds-bg-highlight: #f2c11d;
+  --ds-text-on-highlight: #16171c;
+  --ds-ink: #16171c;
+  --ds-promo-cta-bg: #f2c11d;
+  --ds-promo-cta-fg: #16171c;
+
+  --ds-light: rgba(255, 255, 255, 0.92);
+  --ds-shade: rgba(150, 154, 174, 0.78);
+}

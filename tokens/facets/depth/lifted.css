@@ -1,0 +1,28 @@
+/* Depth · lifted — soft drop shadows; surfaces float above the app (refs/001).
+   Default depth. Shadow strength scales the palette's --ds-shade. */
+:root,
+[data-depth="lifted"] {
+  --ds-shadow-0: 0 0 0 1px color-mix(in srgb, var(--ds-shade) 4%, transparent);
+  --ds-shadow-1: 0 1px 2px color-mix(in srgb, var(--ds-shade) 6%, transparent),
+    0 4px 14px -4px color-mix(in srgb, var(--ds-shade) 10%, transparent);
+  --ds-shadow-2: 0 2px 4px color-mix(in srgb, var(--ds-shade) 6%, transparent),
+    0 14px 32px -10px color-mix(in srgb, var(--ds-shade) 30%, transparent);
+  --ds-shadow-3: 0 4px 8px color-mix(in srgb, var(--ds-shade) 8%, transparent),
+    0 24px 48px -14px color-mix(in srgb, var(--ds-shade) 48%, transparent);
+  --ds-shadow-frame: 0 50px 100px -40px color-mix(in srgb, var(--ds-shade) 52%, transparent);
+  --ds-shadow-accent: 0 10px 22px -8px color-mix(in srgb, var(--ds-bg-accent) 60%, transparent);
+
+  --ds-shadow-inset: none;
+  --ds-shadow-inset-sm: none;
+  --ds-shadow-control: none;
+  --ds-shadow-tile: 0 0 0 1px var(--ds-border-subtle);
+  --ds-shadow-selected: 0 0 0 4px var(--ds-bg-accent-soft), var(--ds-shadow-accent);
+  --ds-track-size: 4px;
+
+  --ds-rail-fill: var(--ds-bg-accent);
+  --ds-rail-fg: var(--ds-text-on-accent);
+  --ds-rail-active-bg: var(--ds-bg-surface);
+  --ds-rail-active-fg: var(--ds-text-accent);
+  --ds-rail-active-shadow: 0 8px 18px -6px color-mix(in srgb, var(--ds-shade) 55%, transparent);
+  --ds-rail-filter: drop-shadow(0 12px 24px color-mix(in srgb, var(--ds-bg-accent) 25%, transparent));
+}

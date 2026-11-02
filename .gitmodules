@@ -1,0 +1,3 @@
+[submodule "vendor/screenshot-to-code"]
+	path = vendor/screenshot-to-code
+	url = https://github.com/abi/screenshot-to-code.git

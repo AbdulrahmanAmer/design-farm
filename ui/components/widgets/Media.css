@@ -1,0 +1,66 @@
+/* Waveform */
+.ds-wave {
+  display: flex;
+  align-items: center;
+  gap: 2px;
+  height: 36px;
+}
+.ds-wave__bar {
+  flex: 1;
+  min-width: 2px;
+  max-width: 3px;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-bg-highlight);
+  opacity: 0.75;
+}
+.ds-wave__bar.is-played { background: var(--ds-bg-accent); opacity: 1; }
+
+/* TransportControls */
+.ds-transport {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 64px;
+  padding: 0 var(--ds-space-6);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-bg-sunken);
+  box-shadow: var(--ds-shadow-1), 0 0 0 1px var(--ds-border-subtle);
+}
+.ds-transport__skip {
+  display: grid;
+  place-items: center;
+  padding: var(--ds-space-1);
+  border: 0;
+  background: none;
+  color: var(--ds-text-accent);
+  border-radius: var(--ds-radius-sm);
+}
+.ds-transport__skip--prev svg { transform: scaleX(-1); }
+.ds-transport__knob {
+  display: grid;
+  place-items: center;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ds-bg-surface);
+  color: var(--ds-text-muted);
+  box-shadow: var(--ds-shadow-inset), 0 0 0 1px var(--ds-border-subtle);
+  transition: box-shadow var(--ds-duration-base) var(--ds-ease-out), color var(--ds-duration-fast) var(--ds-ease-out);
+}
+.ds-transport__knob.is-playing { box-shadow: var(--ds-shadow-control), 0 0 0 1px var(--ds-border-subtle); color: var(--ds-text-accent); }
+
+/* MusicPlayer */
+.ds-player { display: flex; flex-direction: column; gap: var(--ds-space-5); }
+.ds-player__head { display: flex; align-items: center; gap: var(--ds-space-3); }
+.ds-player__note { flex: none; color: var(--ds-bg-highlight); }
+.ds-player__meta { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: var(--ds-space-1); }
+.ds-player__title { font-size: var(--ds-text-lg); font-weight: var(--ds-weight-semibold); text-align: center; }
+.ds-player__scrub {
+  display: block;
+  height: 4px;
+  margin: 0 var(--ds-space-6);
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-border-default);
+  box-shadow: var(--ds-shadow-inset-sm);
+}

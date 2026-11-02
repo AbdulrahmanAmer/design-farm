@@ -1,0 +1,78 @@
+.ds-calendar__pager { border-radius: 50%; }
+
+.ds-week {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: var(--ds-space-1);
+}
+.ds-week__day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-space-2);
+  padding: 0;
+  border: 0;
+  background: none;
+}
+.ds-week__weekday {
+  font-size: var(--ds-text-2xs);
+  color: var(--ds-text-muted);
+}
+.ds-week__date {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  font-size: var(--ds-text-sm);
+  font-weight: var(--ds-weight-semibold);
+  font-variant-numeric: tabular-nums;
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-out);
+}
+.ds-week__day:hover .ds-week__date { background: var(--ds-bg-accent-soft); }
+.ds-week__day.is-active .ds-week__date {
+  background: var(--ds-bg-selected);
+  color: var(--ds-text-on-selected);
+  box-shadow: var(--ds-shadow-selected);
+}
+
+.ds-agenda { margin-top: var(--ds-space-5); }
+.ds-agenda__slot + .ds-agenda__slot { margin-top: var(--ds-space-4); }
+.ds-agenda__time {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  font-size: var(--ds-text-md);
+  font-weight: var(--ds-weight-semibold);
+}
+.ds-agenda__list { margin: var(--ds-space-3) 0 0; padding: 0; list-style: none; }
+.ds-agenda__item {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+  padding: var(--ds-space-2) 0;
+}
+.ds-agenda__icon {
+  display: grid;
+  place-items: center;
+  flex: none;
+  width: 34px;
+  height: 34px;
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-bg-sunken);
+  box-shadow: var(--ds-shadow-control);
+  color: var(--ds-text-primary);
+}
+.ds-agenda__text { flex: 1; min-width: 0; }
+.ds-agenda__title { font-size: var(--ds-text-sm); font-weight: var(--ds-weight-semibold); }
+.ds-agenda__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: var(--ds-text-2xs);
+  color: var(--ds-text-muted);
+}
+.ds-agenda__tagdot { width: 5px; height: 5px; border-radius: 50%; }
+.ds-agenda__tagdot--accent { background: var(--ds-bg-accent); }
+.ds-agenda__tagdot--danger { background: var(--ds-text-danger); }
+.ds-agenda__tagdot--success { background: var(--ds-bg-success); }

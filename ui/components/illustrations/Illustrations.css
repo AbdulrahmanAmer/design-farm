@@ -1,0 +1,8 @@
+.ds-illus {
+  --ds-illus-paper: var(--ds-bg-surface);
+  --ds-illus-accent: var(--ds-bg-accent);
+  display: block;
+  width: 100%;
+  height: auto;
+  color: var(--ds-text-primary);
+}

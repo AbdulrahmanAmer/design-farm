@@ -1,0 +1,6 @@
+/* Type · urbanist — refs/001. Geometric sans. Default. */
+:root,
+[data-type="urbanist"] {
+  --ds-font-sans: "Urbanist", "Outfit", ui-sans-serif, system-ui, -apple-system, "Segoe UI", sans-serif;
+  --ds-font-display: var(--ds-font-sans);
+}

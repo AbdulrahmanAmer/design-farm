@@ -1,0 +1,96 @@
+/* Greeting */
+.ds-greeting__title {
+  display: flex;
+  flex-direction: column;
+  font-size: var(--ds-text-display);
+  font-weight: var(--ds-weight-semibold);
+  line-height: var(--ds-leading-tight);
+  letter-spacing: -0.02em;
+  text-wrap: balance;
+}
+.ds-greeting__hello {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+}
+.ds-greeting__desc {
+  max-width: 34ch;
+  margin-top: var(--ds-space-5);
+  font-size: var(--ds-text-md);
+  line-height: var(--ds-leading-normal);
+  color: var(--ds-text-secondary);
+}
+
+.ds-ws-tokens { display: inline-flex; }
+.ds-ws-token {
+  display: inline-grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: var(--ds-bg-accent-soft);
+  color: var(--ds-text-accent);
+  box-shadow: 0 0 0 3px var(--ds-bg-app);
+}
+.ds-ws-token + .ds-ws-token { margin-left: -6px; }
+
+/* FeatureCard */
+.ds-feature {
+  display: flex;
+  flex-direction: column;
+  border: 0;
+  text-align: left;
+  font: inherit;
+}
+.ds-feature__art {
+  display: grid;
+  place-items: center;
+  flex: 1;
+  padding: var(--ds-space-2) var(--ds-space-4) var(--ds-space-3);
+}
+.ds-feature__art > * { max-width: 120px; }
+.ds-feature__title {
+  font-size: var(--ds-text-md);
+  font-weight: var(--ds-weight-semibold);
+  line-height: var(--ds-leading-snug);
+}
+.ds-feature__desc {
+  margin-top: 2px;
+  font-size: var(--ds-text-2xs);
+  line-height: var(--ds-leading-snug);
+  color: var(--ds-text-muted);
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+/* CreateTile */
+.ds-create {
+  box-shadow: var(--ds-shadow-inset);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-3);
+  width: 100%;
+  border: 1.5px dashed var(--ds-border-dashed);
+  background: var(--ds-bg-accent-subtle);
+  color: var(--ds-text-primary);
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-medium);
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-out), border-color var(--ds-duration-fast) var(--ds-ease-out);
+}
+.ds-create:hover { background: var(--ds-bg-accent-soft); border-color: var(--ds-bg-accent); }
+.ds-create--square { height: 100%; min-height: 160px; border-radius: var(--ds-radius-xl); }
+.ds-create--row { height: 56px; border-radius: var(--ds-radius-lg); }
+.ds-create__plus {
+  display: grid;
+  place-items: center;
+  width: 26px;
+  height: 26px;
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-bg-accent);
+  color: var(--ds-text-on-accent);
+  box-shadow: var(--ds-shadow-accent);
+}
+.ds-create--row .ds-create__plus { width: 22px; height: 22px; border-radius: var(--ds-radius-xs); }

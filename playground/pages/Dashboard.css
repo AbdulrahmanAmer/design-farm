@@ -1,0 +1,66 @@
+.demo-canvas {
+  min-height: 100vh;
+  padding: 56px 48px 72px;
+  background:
+    radial-gradient(1200px 500px at 85% -10%, rgba(255, 255, 255, 0.7), transparent 60%),
+    var(--ds-bg-canvas);
+}
+.demo-canvas > .ds-shell { max-width: 1480px; margin: 0 auto; }
+
+/* 6-column dashboard grid mapped from the reference */
+.demo-grid {
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  grid-template-areas:
+    "greeting greeting create f1 f2 f3"
+    "notif notif assign assign cal cal"
+    "tasks tasks tasks promo side side";
+  gap: var(--ds-space-5);
+  align-items: start;
+}
+.area-greeting { grid-area: greeting; align-self: center; padding-right: var(--ds-space-6); }
+.area-create { grid-area: create; align-self: stretch; }
+.area-f1 { grid-area: f1; align-self: stretch; }
+.area-f2 { grid-area: f2; align-self: stretch; }
+.area-f3 { grid-area: f3; align-self: stretch; }
+.area-notifications { grid-area: notif; align-self: stretch; }
+.area-assignments { grid-area: assign; align-self: stretch; }
+.area-calendar { grid-area: cal; align-self: stretch; }
+.area-tasks { grid-area: tasks; align-self: stretch; }
+.area-promo { grid-area: promo; align-self: stretch; }
+.area-side { grid-area: side; }
+
+.demo-stack { display: flex; flex-direction: column; gap: var(--ds-space-4); }
+.demo-notifications { overflow: visible; }
+.demo-message { margin-left: var(--ds-space-4); }
+.demo-pipe { color: var(--ds-text-muted); font-weight: var(--ds-weight-regular); }
+.demo-export { font-weight: var(--ds-weight-medium); color: var(--ds-text-secondary); }
+
+.demo-side {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--ds-space-4);
+}
+.demo-meeting { grid-column: 1 / -1; }
+
+@media (max-width: 1280px) {
+  .demo-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-areas:
+      "greeting greeting greeting create"
+      "f1 f2 f3 f3"
+      "notif notif assign assign"
+      "cal cal side side"
+      "tasks tasks tasks promo";
+  }
+}
+@media (max-width: 860px) {
+  .demo-canvas { padding: 16px; }
+  .demo-grid {
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "greeting" "create" "f1" "f2" "f3" "notif" "assign" "cal" "tasks" "promo" "side";
+    gap: var(--ds-space-4);
+  }
+  .area-create { min-height: 120px; }
+  .demo-side { grid-template-columns: 1fr; }
+}

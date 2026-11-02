@@ -1,0 +1,5 @@
+/* Type · manrope — refs/002. Rounded grotesque. */
+[data-type="manrope"] {
+  --ds-font-sans: "Manrope", "Segoe UI", ui-sans-serif, system-ui, sans-serif;
+  --ds-font-display: var(--ds-font-sans);
+}

@@ -1,0 +1,72 @@
+.board-canvas {
+  min-height: 100vh;
+  padding: var(--ds-space-8) var(--ds-space-4) 96px;
+  background: var(--ds-bg-app);
+}
+.board-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-3);
+  max-width: 520px;
+  margin: 0 auto var(--ds-space-8);
+}
+.board-bar h1 { font-size: var(--ds-text-xl); font-weight: var(--ds-weight-semibold); }
+
+/* 4-column phone grid mirroring the reference rows */
+.board {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-areas:
+    "clock clock weather weather"
+    "apps apps analog analog"
+    "birthday birthday luck luck"
+    "music music meters meters"
+    "fan frame water water";
+  gap: 28px 24px;
+  max-width: 520px;
+  margin: 0 auto;
+  align-items: stretch;
+}
+.b-clock { grid-area: clock; justify-content: center; }
+.b-weather { grid-area: weather; }
+.b-apps { grid-area: apps; }
+.b-analog { grid-area: analog; display: grid; place-items: center; }
+.b-birthday { grid-area: birthday; }
+.b-luck { grid-area: luck; display: flex; align-items: center; padding-right: 4px; }
+.b-music { grid-area: music; }
+.b-meters { grid-area: meters; }
+.b-fan { grid-area: fan; align-self: center; }
+.b-frame { grid-area: frame; align-self: center; }
+.b-water { grid-area: water; display: flex; flex-direction: column; justify-content: center; }
+
+@media (max-width: 480px) {
+  .board { gap: 20px 14px; }
+  .b-analog .ds-aclock { width: 160px !important; height: 160px !important; }
+  .ds-knobswitch { --knob: 68px; }
+  .ds-knobswitch__label { font-size: var(--ds-text-lg); }
+}
+
+/* Demo-only page switcher */
+.demo-nav {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  z-index: 50;
+  display: flex;
+  gap: 4px;
+  padding: 4px;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-bg-surface);
+  box-shadow: var(--ds-shadow-3), 0 0 0 1px var(--ds-border-default);
+  transform: translateX(-50%);
+}
+.demo-nav a {
+  padding: 8px 14px;
+  border-radius: var(--ds-radius-pill);
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-semibold);
+  color: var(--ds-text-secondary);
+  text-decoration: none;
+}
+.demo-nav a[aria-current="page"] { background: var(--ds-bg-accent); color: var(--ds-text-on-accent); }

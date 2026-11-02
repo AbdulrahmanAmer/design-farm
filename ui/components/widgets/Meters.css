@@ -1,0 +1,43 @@
+.ds-metergroup { display: flex; flex-direction: column; gap: var(--ds-space-4); }
+.ds-metergroup__title { font-size: var(--ds-text-sm); font-weight: var(--ds-weight-semibold); }
+.ds-metergroup__row {
+  display: grid;
+  grid-auto-flow: column;
+  grid-auto-columns: 1fr;
+  gap: var(--ds-space-2);
+}
+
+.ds-vmeter {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--ds-space-2);
+}
+.ds-vmeter__value,
+.ds-vmeter__label {
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-medium);
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.04em;
+}
+.ds-vmeter__label { letter-spacing: 0; }
+.ds-vmeter__track {
+  position: relative;
+  width: 12px;
+  height: 128px;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-chart-track);
+  box-shadow: var(--ds-shadow-inset-sm), 0 0 0 1px var(--ds-border-subtle);
+}
+.ds-vmeter__fill {
+  position: absolute;
+  left: 3px;
+  right: 3px;
+  bottom: 3px;
+  max-height: calc(100% - 6px);
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-meter-color);
+  transition: height 500ms var(--ds-ease-out);
+}
+.ds-vmeter--accent { --ds-meter-color: var(--ds-bg-accent); }
+.ds-vmeter--highlight { --ds-meter-color: var(--ds-bg-highlight); }

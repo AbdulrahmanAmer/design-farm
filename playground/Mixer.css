@@ -1,0 +1,69 @@
+.mixer-fab {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 60;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-bg-inverse);
+  color: var(--ds-text-inverse);
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-semibold);
+  box-shadow: var(--ds-shadow-3);
+}
+.mixer-fab span { opacity: 0.75; font-weight: var(--ds-weight-medium); }
+
+.mixer {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-3);
+  width: min(420px, calc(100vw - 32px));
+  max-height: calc(100vh - 32px);
+  overflow: auto;
+  padding: var(--ds-space-4) var(--ds-space-5);
+  border-radius: var(--ds-radius-xl);
+  background: var(--ds-bg-surface);
+  color: var(--ds-text-primary);
+  box-shadow: var(--ds-shadow-3), 0 0 0 1px var(--ds-border-subtle);
+}
+.mixer__head { display: flex; align-items: center; justify-content: space-between; }
+.mixer__head h2 { font-size: var(--ds-text-lg); font-weight: var(--ds-weight-semibold); }
+
+.mixer__presets { display: flex; flex-wrap: wrap; gap: 6px; }
+.mixer__presets button {
+  padding: 5px 10px;
+  border: 0;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-bg-sunken);
+  box-shadow: var(--ds-shadow-control);
+  color: var(--ds-text-secondary);
+  font-size: var(--ds-text-2xs);
+  font-weight: var(--ds-weight-semibold);
+}
+.mixer__presets button.is-active { background: var(--ds-bg-accent); color: var(--ds-text-on-accent); }
+
+.mixer__row { display: grid; grid-template-columns: 64px 1fr; align-items: center; gap: var(--ds-space-2); }
+.mixer__row .ds-seg { flex-wrap: wrap; }
+.mixer__axis {
+  font-size: var(--ds-text-2xs);
+  font-weight: var(--ds-weight-semibold);
+  color: var(--ds-text-muted);
+}
+
+.mixer__json {
+  margin: 0;
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-bg-sunken);
+  box-shadow: var(--ds-shadow-inset-sm);
+  font: 11px/1.5 ui-monospace, "Cascadia Code", Menlo, monospace;
+  color: var(--ds-text-secondary);
+  white-space: pre-wrap;
+  word-break: break-all;
+}
+.mixer__actions { display: flex; justify-content: flex-end; gap: var(--ds-space-2); }

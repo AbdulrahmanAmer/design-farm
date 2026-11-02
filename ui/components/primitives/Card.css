@@ -1,0 +1,58 @@
+.ds-card {
+  position: relative;
+  min-width: 0;
+  color: var(--ds-text-primary);
+  transition: box-shadow var(--ds-duration-base) var(--ds-ease-out), transform var(--ds-duration-base) var(--ds-ease-out);
+}
+
+.ds-card--surface { background: var(--ds-bg-surface); }
+.ds-card--sunken { background: var(--ds-bg-sunken); }
+.ds-card--accent { background: var(--ds-bg-accent); color: var(--ds-text-on-accent); }
+
+.ds-card--e0 { box-shadow: var(--ds-shadow-0); }
+.ds-card--e1 { box-shadow: var(--ds-shadow-1); }
+.ds-card--e2 { box-shadow: var(--ds-shadow-2); }
+.ds-card--e3 { box-shadow: var(--ds-shadow-3); z-index: var(--ds-z-floating); }
+.ds-card--accent.ds-card--e2 { box-shadow: var(--ds-shadow-accent); }
+/* Sunken cards are wells: pressed in rather than lifted, whatever the elevation. */
+.ds-card.ds-card--sunken { box-shadow: var(--ds-shadow-inset); }
+
+.ds-card--p-none { padding: 0; }
+.ds-card--p-sm { padding: var(--ds-space-3) var(--ds-space-4); }
+.ds-card--p-md { padding: var(--ds-space-4) var(--ds-space-5); }
+.ds-card--p-lg { padding: var(--ds-space-6); }
+
+.ds-card--r-lg { border-radius: var(--ds-radius-lg); }
+.ds-card--r-xl { border-radius: var(--ds-radius-xl); }
+.ds-card--r-2xl { border-radius: var(--ds-radius-2xl); }
+
+.ds-card--interactive { cursor: pointer; }
+.ds-card--interactive:hover { box-shadow: var(--ds-shadow-2); transform: translateY(-2px); }
+
+.ds-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: var(--ds-space-3);
+  margin-bottom: var(--ds-space-5);
+}
+.ds-card-header__title {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+  min-width: 0;
+}
+.ds-card-header h2,
+.ds-card-header h3 {
+  font-size: var(--ds-text-xl);
+  font-weight: var(--ds-weight-semibold);
+  line-height: var(--ds-leading-tight);
+  letter-spacing: -0.01em;
+}
+.ds-card-header h3 { font-size: var(--ds-text-lg); }
+.ds-card-header__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-1);
+  margin-right: calc(var(--ds-space-2) * -1);
+}

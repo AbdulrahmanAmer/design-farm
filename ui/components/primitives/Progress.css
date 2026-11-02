@@ -1,0 +1,49 @@
+.ds-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+}
+.ds-progress--value-end .ds-progress__value { order: 1; }
+.ds-progress__value {
+  min-width: 3ch;
+  font-size: var(--ds-text-xs);
+  font-weight: var(--ds-weight-semibold);
+  font-variant-numeric: tabular-nums;
+}
+.ds-progress__track {
+  position: relative;
+  flex: 1;
+  height: var(--ds-track-size);
+  min-width: 48px;
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-chart-track);
+  box-shadow: var(--ds-shadow-inset-sm);
+  overflow: hidden;
+}
+.ds-progress__fill {
+  position: absolute;
+  inset: 0 auto 0 0;
+  border-radius: inherit;
+  background: var(--ds-progress-color);
+  transition: width var(--ds-duration-base) var(--ds-ease-out);
+}
+.ds-progress--accent, .ds-ring--accent { --ds-progress-color: var(--ds-bg-accent); }
+.ds-progress--success, .ds-ring--success { --ds-progress-color: var(--ds-bg-success); }
+.ds-progress--danger, .ds-ring--danger { --ds-progress-color: var(--ds-text-danger); }
+.ds-progress--neutral, .ds-ring--neutral { --ds-progress-color: var(--ds-text-muted); }
+.ds-progress--highlight, .ds-ring--highlight { --ds-progress-color: var(--ds-bg-highlight); }
+
+.ds-ring {
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  flex: none;
+}
+.ds-ring svg { position: absolute; inset: 0; }
+.ds-ring__track { stroke: var(--ds-chart-track); }
+.ds-ring__fill { stroke: var(--ds-progress-color); transition: stroke-dashoffset 600ms var(--ds-ease-out); }
+.ds-ring__value {
+  font-size: var(--ds-text-sm);
+  font-weight: var(--ds-weight-bold);
+  font-variant-numeric: tabular-nums;
+}

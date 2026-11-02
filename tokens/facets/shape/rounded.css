@@ -1,0 +1,10 @@
+/* Shape · rounded — refs/001. Default shape. */
+:root,
+[data-shape="rounded"] {
+  --ds-radius-xs: 6px;
+  --ds-radius-sm: 8px;
+  --ds-radius-md: 10px;
+  --ds-radius-lg: 16px;
+  --ds-radius-xl: 24px;
+  --ds-radius-2xl: 32px;
+}

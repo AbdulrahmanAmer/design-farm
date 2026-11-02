@@ -1,0 +1,48 @@
+/* Palette · violet-night — dark counterpart of violet (refs/001, derived). */
+[data-palette="violet-night"] {
+  color-scheme: dark;
+
+  --ds-bg-canvas: #0b0b1c;
+  --ds-bg-app: #12122a;
+  --ds-bg-surface: #1b1b36;
+  --ds-bg-sunken: #23234a;
+  --ds-bg-hover: #26264e;
+  --ds-bg-inverse: #f3f3fb;
+  --ds-bg-accent: #8073f3;
+  --ds-bg-accent-hover: #9186f5;
+  --ds-bg-accent-soft: #2d2a5e;
+  --ds-bg-accent-subtle: #222048;
+  --ds-bg-success: #4fb08a;
+  --ds-bg-success-soft: #1d3b33;
+  --ds-bg-danger-soft: #45202d;
+
+  --ds-text-primary: #f1f1fa;
+  --ds-text-secondary: #a6a7c4;
+  --ds-text-muted: #6f7093;
+  --ds-text-inverse: #15153b;
+  --ds-text-on-accent: #ffffff;
+  --ds-text-accent: #a79ef7;
+  --ds-text-success: #6fd1a8;
+  --ds-text-danger: #f07d92;
+
+  --ds-border-subtle: #262649;
+  --ds-border-default: #33335a;
+  --ds-border-dashed: #4d47a0;
+  --ds-border-focus: #a79ef7;
+
+  --ds-status-online: #6fd1a8;
+  --ds-status-new: #4fb08a;
+  --ds-status-attention: #f6c04d;
+  --ds-chart-track: #2c2c52;
+
+  --ds-bg-selected: var(--ds-bg-accent);
+  --ds-text-on-selected: #ffffff;
+  --ds-bg-highlight: #f6c04d;
+  --ds-text-on-highlight: #15153b;
+  --ds-ink: #0f0f2e;
+  --ds-promo-cta-bg: #15153b;
+  --ds-promo-cta-fg: #ffffff;
+
+  --ds-light: rgba(255, 255, 255, 0.06);
+  --ds-shade: rgba(0, 0, 0, 0.95);
+}

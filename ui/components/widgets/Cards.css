@@ -1,0 +1,96 @@
+/* PromoCard */
+.ds-promo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: var(--ds-space-6) var(--ds-space-5) var(--ds-space-6);
+}
+.ds-promo__art {
+  --ds-illus-paper: var(--ds-text-on-accent);
+  --ds-illus-accent: var(--ds-bg-accent);
+  width: 100%;
+  max-width: 120px;
+}
+.ds-promo__art .ds-illus { color: var(--ds-ink); }
+.ds-promo__title {
+  margin-top: var(--ds-space-5);
+  font-size: clamp(var(--ds-text-xl), 1.6vw, var(--ds-text-2xl));
+  white-space: nowrap;
+  font-weight: var(--ds-weight-semibold);
+  line-height: var(--ds-leading-tight);
+}
+.ds-promo__desc {
+  margin-top: var(--ds-space-3);
+  font-size: var(--ds-text-xs);
+  line-height: var(--ds-leading-normal);
+  opacity: 0.88;
+}
+.ds-promo__cta { margin-top: auto; }
+.ds-promo__desc { margin-bottom: var(--ds-space-6); }
+/* The CTA stays ink in both themes so it reads on the accent fill. */
+.ds-promo .ds-promo__cta { background: var(--ds-promo-cta-bg); color: var(--ds-promo-cta-fg); }
+
+/* StatCard */
+.ds-stat {
+  display: flex;
+  flex-direction: column;
+  gap: var(--ds-space-4);
+}
+.ds-stat--success { --ds-stat-tone: var(--ds-text-success); }
+.ds-stat--danger { --ds-stat-tone: var(--ds-text-danger); }
+.ds-stat--accent { --ds-stat-tone: var(--ds-text-accent); }
+.ds-stat__head {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+}
+.ds-stat__labels { display: flex; flex-direction: column; min-width: 0; }
+.ds-stat__eyebrow {
+  font-size: 10px;
+  font-weight: var(--ds-weight-semibold);
+  text-transform: uppercase;
+  white-space: nowrap;
+  color: var(--ds-stat-tone);
+}
+.ds-stat__title {
+  font-size: var(--ds-text-md);
+  font-weight: var(--ds-weight-semibold);
+  line-height: var(--ds-leading-snug);
+}
+.ds-stat__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--ds-space-2);
+}
+.ds-stat__caption {
+  font-size: var(--ds-text-2xs);
+  line-height: var(--ds-leading-snug);
+  color: var(--ds-text-muted);
+}
+
+/* MeetingCard */
+.ds-meeting .ds-card-header { margin-bottom: var(--ds-space-1); }
+.ds-meeting__when {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-2);
+  font-size: var(--ds-text-2xs);
+  color: var(--ds-text-muted);
+}
+.ds-meeting__dot { width: 8px; height: 8px; border-radius: 50%; background: var(--ds-bg-accent); }
+.ds-meeting__foot {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--ds-space-3);
+  margin-top: var(--ds-space-3);
+}
+.ds-meeting__desc {
+  max-width: 24ch;
+  font-size: var(--ds-text-xs);
+  line-height: var(--ds-leading-snug);
+}
+.ds-meeting__actions { display: flex; gap: var(--ds-space-2); }

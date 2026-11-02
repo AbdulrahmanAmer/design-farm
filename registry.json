@@ -1,0 +1,101 @@
+{
+  "$comment": "Source of truth for what the farm holds and where each piece came from. Update on every harvest.",
+  "refs": [
+    {
+      "id": "001-planify-dashboard",
+      "title": "Planify task dashboard",
+      "file": "refs/001-planify-dashboard/reference.webp",
+      "origin": "Dribbble-style shot supplied by the owner; author not recorded. Internal study only — do not redistribute.",
+      "harvested": "2026-11-02"
+    },
+    {
+      "id": "002-soft-widgets",
+      "title": "Soft-UI phone widget board",
+      "file": "refs/002-soft-widgets/reference.png",
+      "origin": "Pinterest-style image supplied by the owner; author not recorded. Internal study only — do not redistribute.",
+      "harvested": "2026-11-02"
+    }
+  ],
+  "facets": {
+    "palette": [
+      { "id": "violet", "ref": "001-planify-dashboard" },
+      { "id": "violet-night", "ref": "001-planify-dashboard", "derived": true },
+      { "id": "cobalt-signal", "ref": "002-soft-widgets" }
+    ],
+    "depth": [
+      { "id": "lifted", "ref": "001-planify-dashboard" },
+      { "id": "neumorphic", "ref": "002-soft-widgets" },
+      { "id": "flat", "derived": true }
+    ],
+    "shape": [
+      { "id": "rounded", "ref": "001-planify-dashboard" },
+      { "id": "soft", "ref": "002-soft-widgets" },
+      { "id": "crisp", "derived": true }
+    ],
+    "type": [
+      { "id": "urbanist", "ref": "001-planify-dashboard" },
+      { "id": "manrope", "ref": "002-soft-widgets" },
+      { "id": "system", "derived": true }
+    ],
+    "density": [
+      { "id": "comfortable" },
+      { "id": "compact", "derived": true },
+      { "id": "roomy", "derived": true }
+    ]
+  },
+  "recipes": {
+    "planify-light": { "palette": "violet", "depth": "lifted", "shape": "rounded", "type": "urbanist", "density": "comfortable" },
+    "planify-dark": { "palette": "violet-night", "depth": "lifted", "shape": "rounded", "type": "urbanist", "density": "comfortable" },
+    "soft-cobalt": { "palette": "cobalt-signal", "depth": "neumorphic", "shape": "soft", "type": "manrope", "density": "comfortable" }
+  },
+  "components": [
+    { "name": "Icon", "file": "ui/components/primitives/Icon.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "Button", "file": "ui/components/primitives/Button.tsx", "layer": "primitive", "ref": "001-planify-dashboard", "variants": ["primary", "inverse", "soft", "ghost", "dashed"] },
+    { "name": "IconButton", "file": "ui/components/primitives/Button.tsx", "layer": "primitive", "ref": "001-planify-dashboard", "variants": ["ghost", "soft", "surface", "accent"] },
+    { "name": "Badge", "file": "ui/components/primitives/Badge.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "StatusDot", "file": "ui/components/primitives/Badge.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "Avatar", "file": "ui/components/primitives/Avatar.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "AvatarGroup", "file": "ui/components/primitives/Avatar.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "SegmentedControl", "file": "ui/components/primitives/SegmentedControl.tsx", "layer": "primitive", "ref": "001-planify-dashboard", "variants": ["filled", "plain"] },
+    { "name": "SearchInput", "file": "ui/components/primitives/Inputs.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "TextField", "file": "ui/components/primitives/Inputs.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "MetaItem", "file": "ui/components/primitives/Inputs.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "DottedRule", "file": "ui/components/primitives/Inputs.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "Card", "file": "ui/components/primitives/Card.tsx", "layer": "primitive", "ref": "001-planify-dashboard", "variants": ["surface", "accent", "sunken"] },
+    { "name": "CardHeader", "file": "ui/components/primitives/Card.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "ProgressBar", "file": "ui/components/primitives/Progress.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "ProgressRing", "file": "ui/components/primitives/Progress.tsx", "layer": "primitive", "ref": "001-planify-dashboard" },
+    { "name": "AppShell", "file": "ui/components/navigation/Navigation.tsx", "layer": "layout", "ref": "001-planify-dashboard" },
+    { "name": "TopBar", "file": "ui/components/navigation/Navigation.tsx", "layer": "layout", "ref": "001-planify-dashboard" },
+    { "name": "NavTabs", "file": "ui/components/navigation/Navigation.tsx", "layer": "navigation", "ref": "001-planify-dashboard" },
+    { "name": "SideRail", "file": "ui/components/navigation/Navigation.tsx", "layer": "navigation", "ref": "001-planify-dashboard" },
+    { "name": "Greeting", "file": "ui/components/widgets/Hero.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "FeatureCard", "file": "ui/components/widgets/Hero.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "CreateTile", "file": "ui/components/widgets/Hero.tsx", "layer": "widget", "ref": "001-planify-dashboard", "variants": ["square", "row"] },
+    { "name": "NotificationItem", "file": "ui/components/widgets/Notifications.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "SwipeActions", "file": "ui/components/widgets/Notifications.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "AssignmentCard", "file": "ui/components/widgets/Assignment.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "CalendarCard", "file": "ui/components/widgets/Calendar.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "WeekStrip", "file": "ui/components/widgets/Calendar.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "TaskList", "file": "ui/components/widgets/Tasks.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "PromoCard", "file": "ui/components/widgets/Cards.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "StatCard", "file": "ui/components/widgets/Cards.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "MeetingCard", "file": "ui/components/widgets/Cards.tsx", "layer": "widget", "ref": "001-planify-dashboard" },
+    { "name": "DigitalClock", "file": "ui/components/widgets/Clocks.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "AnalogClock", "file": "ui/components/widgets/Clocks.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "DayChips", "file": "ui/components/widgets/Readouts.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "WeatherCard", "file": "ui/components/widgets/Readouts.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "TimeChip", "file": "ui/components/widgets/Readouts.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "CountdownCard", "file": "ui/components/widgets/Readouts.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "AppTile", "file": "ui/components/widgets/Controls.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "AppGrid", "file": "ui/components/widgets/Controls.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "KnobSwitch", "file": "ui/components/widgets/Controls.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "IntakeStepper", "file": "ui/components/widgets/Controls.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "Waveform", "file": "ui/components/widgets/Media.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "TransportControls", "file": "ui/components/widgets/Media.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "MusicPlayer", "file": "ui/components/widgets/Media.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "VerticalMeter", "file": "ui/components/widgets/Meters.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "MeterGroup", "file": "ui/components/widgets/Meters.tsx", "layer": "widget", "ref": "002-soft-widgets" },
+    { "name": "Illustrations", "file": "ui/components/illustrations/Illustrations.tsx", "layer": "illustration", "ref": "001-planify-dashboard" }
+  ]
+}

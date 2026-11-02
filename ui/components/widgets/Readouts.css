@@ -1,0 +1,74 @@
+/* DayChips */
+.ds-daychips {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--ds-space-2);
+}
+.ds-daychip {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  padding: 0;
+  border: 0;
+  border-radius: 50%;
+  background: var(--ds-bg-surface);
+  box-shadow: var(--ds-shadow-control), 0 0 0 1px var(--ds-border-subtle);
+  font-size: var(--ds-text-sm);
+  font-weight: var(--ds-weight-medium);
+  font-variant-numeric: tabular-nums;
+  color: var(--ds-text-primary);
+  transition: background-color var(--ds-duration-fast) var(--ds-ease-out), box-shadow var(--ds-duration-fast) var(--ds-ease-out);
+}
+.ds-daychip:hover { background: var(--ds-bg-hover); }
+.ds-daychip:active { box-shadow: var(--ds-shadow-inset-sm); }
+.ds-daychip.is-active {
+  background: var(--ds-bg-selected);
+  color: var(--ds-text-on-selected);
+  box-shadow: var(--ds-shadow-selected);
+}
+
+/* WeatherCard */
+.ds-weather { display: flex; flex-direction: column; gap: var(--ds-space-4); }
+.ds-weather__plate {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--ds-space-2) var(--ds-space-5);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-bg-surface);
+  box-shadow: var(--ds-shadow-1), 0 0 0 1px var(--ds-border-subtle);
+}
+.ds-weather__reading { display: flex; flex-direction: column; align-items: center; }
+.ds-weather__condition { font-size: var(--ds-text-sm); color: var(--ds-text-secondary); }
+.ds-weather__temp {
+  font-family: var(--ds-font-display);
+  font-size: 2rem;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+.ds-weather__unit { margin-left: 2px; font-size: var(--ds-text-sm); font-weight: var(--ds-weight-semibold); }
+.ds-weather__icon { color: var(--ds-text-accent); }
+
+/* Countdown */
+.ds-countdown__title { font-size: var(--ds-text-lg); font-weight: var(--ds-weight-medium); }
+.ds-countdown__chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--ds-space-2);
+  margin-top: var(--ds-space-3);
+}
+.ds-timechip { display: inline-flex; align-items: flex-end; gap: 3px; }
+.ds-timechip__value {
+  padding: 3px 8px;
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-bg-accent);
+  color: var(--ds-text-on-accent);
+  box-shadow: var(--ds-shadow-accent);
+  font-family: var(--ds-font-display);
+  font-size: 1.25rem;
+  line-height: 1.1;
+  letter-spacing: 0.04em;
+  font-variant-numeric: tabular-nums;
+}
+.ds-timechip__unit { font-size: var(--ds-text-xs); font-weight: var(--ds-weight-semibold); }
