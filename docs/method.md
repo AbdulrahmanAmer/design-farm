@@ -35,6 +35,7 @@ reference image ──► measure (tools/palette.py) ──► facets ──► 
 | `python -I tools/palette.py <img>` | Quantized surfaces, **exact accent fills** (most frequent exact colour per hue family, which survives anti-aliasing), ink detection, contrast, and a CSS stub. Neutral and chromatic pixels are quantized separately, so a 2% accent isn't drowned by greys. |
 | `node tools/curve.mjs rail \| at-x \| at-y` | Solves cubic-Bézier geometry: where a silhouette reaches an x or y, and the content inset that clears a curve by N px. |
 | `node tools/shoot.mjs [--recipe] [--page] [--width] [--remix N]` | Screenshot matrix of pages × recipes × viewports into `shots/`. Needs `npm i -D playwright && npx playwright install chromium`. |
+| `node tools/export-css.mjs [--fonts] [--dark <palette>] [--strip] [--out f]` | Flattens every facet into one CSS file for consumers that can't import the farm (static HTML, other stacks). `--dark` adds no-JS dark mode from `prefers-color-scheme` / `[data-theme="dark"]`. First consumer: Nightshift's `docs/design/system-diagram.theme.css`. |
 | `tools/snippets/frame-viewport.js` | Renders the page in a 1440px iframe scaled to the pane, for narrow preview panes. |
 | `tools/snippets/measure.js` | `measure(".selector")` prints boxes, pitch and gaps, to check spacing against the math. |
 | Playground **Mixer** | Remix facets live, try presets, shuffle, and copy the recipe JSON. |

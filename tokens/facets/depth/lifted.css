@@ -11,6 +11,9 @@
     0 24px 48px -14px color-mix(in srgb, var(--ds-shade) 48%, transparent);
   --ds-shadow-frame: 0 50px 100px -40px color-mix(in srgb, var(--ds-shade) 52%, transparent);
   --ds-shadow-accent: 0 10px 22px -8px color-mix(in srgb, var(--ds-bg-accent) 60%, transparent);
+  /* filter equivalents of shadow-1 / shadow-2, for SVG shapes that can't take box-shadow */
+  --ds-filter-1: drop-shadow(0 3px 6px color-mix(in srgb, var(--ds-shade) 12%, transparent));
+  --ds-filter-2: drop-shadow(0 10px 18px color-mix(in srgb, var(--ds-shade) 22%, transparent));
 
   --ds-shadow-inset: none;
   --ds-shadow-inset-sm: none;

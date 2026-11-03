@@ -9,6 +9,8 @@
   --ds-shadow-3: 0 0 0 1px var(--ds-text-primary);
   --ds-shadow-frame: var(--hairline);
   --ds-shadow-accent: none;
+  --ds-filter-1: none;
+  --ds-filter-2: none;
 
   --ds-shadow-inset: inset 0 0 0 1px var(--ds-border-default);
   --ds-shadow-inset-sm: inset 0 0 0 1px var(--ds-border-default);

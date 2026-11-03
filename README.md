@@ -37,7 +37,7 @@ applyRecipe(recipes["soft-cobalt"]);                         // or any { palette
 | `playground/` | Vite app: pages rebuilt from refs, gallery, Mixer |
 | `refs/NNN-name/` | reference image + `notes.md` (measured vs shipped, deviations). Internal study only |
 | `registry.json` | refs, facets, recipes, components, provenance |
-| `tools/` | `palette.py` (measure colours) · `curve.mjs` (Bézier geometry) · `shoot.mjs` (screenshot matrix) · `snippets/` |
+| `tools/` | `palette.py` (measure colours) · `curve.mjs` (Bézier geometry) · `shoot.mjs` (screenshot matrix) · `export-css.mjs` (flatten tokens for pages that can't import the farm) · `snippets/` |
 | `skills/` | `harvest` · `screenshot-to-code` · `unslop` (CC BY 4.0) |
 | `vendor/screenshot-to-code` | upstream app, git submodule (MIT) |
 
@@ -46,7 +46,7 @@ applyRecipe(recipes["soft-cobalt"]);                         // or any { palette
 | Axis | Options | Roles it sets |
 |---|---|---|
 | palette | `violet` (001) · `violet-night` (derived) · `cobalt-signal` (002) | every colour role, selection/highlight, `--ds-ink`, light physics `--ds-light` / `--ds-shade` |
-| depth | `lifted` (001) · `neumorphic` (002) · `flat` (derived) | `--ds-shadow-0…3`, `-frame`, `-accent`, `-inset(-sm)`, `-control`, `-tile`, `-selected`, `--ds-track-size`, `--ds-rail-*` |
+| depth | `lifted` (001) · `neumorphic` (002) · `flat` (derived) | `--ds-shadow-0…3`, `-frame`, `-accent`, `-inset(-sm)`, `-control`, `-tile`, `-selected`, `--ds-filter-1/2` (drop-shadow for SVG shapes), `--ds-track-size`, `--ds-rail-*` |
 | shape | `rounded` (001) · `soft` (002) · `crisp` (derived) | `--ds-radius-xs…2xl` |
 | type | `urbanist` (001) · `manrope` (002) · `system` (derived) | `--ds-font-sans`, `--ds-font-display` |
 | density | `compact` ×0.8 · `comfortable` ×1 · `roomy` ×1.2 | `--ds-density`, which scales every `--ds-space-*` and control height |

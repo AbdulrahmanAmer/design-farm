@@ -14,6 +14,8 @@
   --ds-shadow-3: -12px -12px 26px var(--ds-light), 14px 14px 28px var(--ds-shade);
   --ds-shadow-frame: -20px -20px 40px var(--ds-light), 20px 20px 40px var(--neu-shade);
   --ds-shadow-accent: -3px -3px 8px var(--ds-light), 4px 4px 10px color-mix(in srgb, var(--ds-bg-accent) 35%, transparent);
+  --ds-filter-1: drop-shadow(-3px -3px 4px var(--ds-light)) drop-shadow(3px 3px 5px var(--neu-shade));
+  --ds-filter-2: drop-shadow(-6px -6px 8px var(--ds-light)) drop-shadow(6px 6px 10px var(--neu-shade));
 
   --ds-shadow-inset: inset 4px 4px 8px var(--neu-shade), inset -4px -4px 8px var(--ds-light);
   --ds-shadow-inset-sm: inset 2px 2px 4px var(--neu-shade), inset -2px -2px 4px var(--ds-light);
