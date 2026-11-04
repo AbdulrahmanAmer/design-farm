@@ -148,5 +148,5 @@ fan      frame    water    water
 
 ## Licence
 
-MIT, see [LICENSE](LICENSE). Third-party parts keep their own: `vendor/screenshot-to-code` is MIT (Abi Raja) and
+MIT, see [LICENSE](LICENSE) and [NOTICE](NOTICE). Third-party parts keep their own: `vendor/screenshot-to-code` is MIT (Abi Raja) and
 `.claude/skills/unslop` is CC BY 4.0 (Damir Sokolovsky; keep the credit). Reference images are not included.

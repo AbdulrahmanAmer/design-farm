@@ -1,0 +1,8 @@
+design-farm
+Copyright (c) 2026 Abdulrahman Amer. MIT, see LICENSE.
+
+Third-party parts keep their own licences:
+
+- vendor/screenshot-to-code: git submodule of abi/screenshot-to-code, MIT (c) Abi Raja.
+- .claude/skills/unslop: CC BY 4.0, Damir Sokolovsky (https://heydamir.design/unslop).
+  Keep the credit in any adaptation.
