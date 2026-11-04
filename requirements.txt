@@ -1,0 +1,2 @@
+# tools/palette.py
+Pillow>=10

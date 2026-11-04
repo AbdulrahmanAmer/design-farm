@@ -6,9 +6,9 @@ description: Reference-driven UI generation method from the open-source screensh
 # screenshot-to-code (reference method)
 
 The upstream project is vendored in this repo as a git submodule at `vendor/screenshot-to-code` (MIT, Abi Raja;
-run `git submodule update --init` after cloning). Outside the repo the owner keeps a clone at
-`D:\NightShift-tools\screenshot-to-code`. It is an app, not a Claude skill; this skill distils its method so an agent
-can apply it directly without running the app. In design-farm, use it through `skills/harvest`.
+`npm install` fetches it; otherwise run `npm run setup` or `git submodule update --init`). It is an app, not an
+agent skill; this skill distils its method so an agent can apply it directly without running the app. In
+design-farm, use it through the `harvest` skill.
 
 ## Read these files first
 - `backend/prompts/create/image.py` and `backend/prompts/create/text.py` — the system prompts that turn a screenshot or

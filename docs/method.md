@@ -32,6 +32,7 @@ reference image ──► measure (tools/palette.py) ──► facets ──► 
 
 | Tool | Use |
 |---|---|
+| `npm run setup` / `npm run doctor` | `tools/setup.mjs`: fetches `vendor/screenshot-to-code` when a clone skipped submodules (runs on `npm install`), then checks Node, node_modules, Python + Pillow and Playwright. |
 | `python -I tools/palette.py <img>` | Quantized surfaces, **exact accent fills** (most frequent exact colour per hue family, which survives anti-aliasing), ink detection, contrast, and a CSS stub. Neutral and chromatic pixels are quantized separately, so a 2% accent isn't drowned by greys. |
 | `node tools/curve.mjs rail \| at-x \| at-y` | Solves cubic-Bézier geometry: where a silhouette reaches an x or y, and the content inset that clears a curve by N px. |
 | `node tools/shoot.mjs [--recipe] [--page] [--width] [--remix N]` | Screenshot matrix of pages × recipes × viewports into `shots/`. Needs `npm i -D playwright && npx playwright install chromium`. |
@@ -55,5 +56,5 @@ reference image ──► measure (tools/palette.py) ──► facets ──► 
 ## Licences
 
 - `vendor/screenshot-to-code`: MIT © Abi Raja.
-- `skills/unslop`: CC BY 4.0, Damir Sokolovsky. Keep the credit in any adaptation.
+- `.claude/skills/unslop`: CC BY 4.0, Damir Sokolovsky. Keep the credit in any adaptation.
 - `refs/`: third-party images for internal study. Do not redistribute.

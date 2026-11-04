@@ -6,11 +6,18 @@ independent **facets** (palette, depth, shape, type, density), and keeps the com
 the axes, so the number of looks multiplies, including ones no reference ever had.
 
 ```bash
-git submodule update --init   # vendor/screenshot-to-code
-npm install
-npm run dev                   # playground on :5178. Dashboard /, board #board, gallery #components, Mixer bottom-right
-npm run build                 # type-check + build
+git clone --recurse-submodules https://github.com/AbdulrahmanAmer/design-farm.git
+cd design-farm
+npm install                       # also fetches vendor/screenshot-to-code if the clone skipped it, then runs the doctor
+pip install -r requirements.txt   # Pillow, for tools/palette.py
+npm run doctor                    # checks Node, the upstream submodule, node_modules, Python + Pillow, Playwright
+npm run dev                       # playground on :5178. Dashboard /, board #board, gallery #components, Mixer bottom-right
+npm run build                     # type-check + build
 ```
+
+**Agents.** `AGENTS.md` holds the rules (Claude Code reads it via `CLAUDE.md`). The skills are in `.claude/skills/`,
+which Claude Code and OpenCode both load when you open the repo, so `harvest`, `screenshot-to-code` and `unslop`
+are available in either one with no extra config.
 
 ```tsx
 import { applyRecipe, recipes, Card, Button } from "./ui"; // ui/index.ts also pulls in tokens/index.css
@@ -19,14 +26,14 @@ applyRecipe(recipes["soft-cobalt"]);                         // or any { palette
 
 ## How it grows
 
-1. **Harvest** a reference with [`skills/harvest`](skills/harvest/SKILL.md). It measures colours with
+1. **Harvest** a reference with the [`harvest` skill](.claude/skills/harvest/SKILL.md). It measures colours with
    `tools/palette.py`, decomposes the reference into facets, reuses or extends components (variant before new),
    rebuilds the reference as a page, verifies it, and records provenance in `registry.json`.
 2. **Remix** in the playground Mixer, or with URL params (`?palette=cobalt-signal&depth=lifted&shape=crisp`).
    Keep good finds as named recipes in `registry.json`.
 
 [docs/method.md](docs/method.md) explains the model, the tools and the environment gotchas.
-[CLAUDE.md](CLAUDE.md) lists the rules agents follow.
+[AGENTS.md](AGENTS.md) lists the rules agents follow.
 
 ## Repo map
 
@@ -37,8 +44,9 @@ applyRecipe(recipes["soft-cobalt"]);                         // or any { palette
 | `playground/` | Vite app: pages rebuilt from refs, gallery, Mixer |
 | `refs/NNN-name/` | reference image + `notes.md` (measured vs shipped, deviations). Internal study only |
 | `registry.json` | refs, facets, recipes, components, provenance |
-| `tools/` | `palette.py` (measure colours) · `curve.mjs` (Bézier geometry) · `shoot.mjs` (screenshot matrix) · `export-css.mjs` (flatten tokens for pages that can't import the farm) · `snippets/` |
-| `skills/` | `harvest` · `screenshot-to-code` · `unslop` (CC BY 4.0) |
+| `tools/` | `setup.mjs` (fetch submodule + doctor) · `palette.py` (measure colours) · `curve.mjs` (Bézier geometry) · `shoot.mjs` (screenshot matrix) · `export-css.mjs` (flatten tokens for pages that can't import the farm) · `snippets/` |
+| `.claude/skills/` | `harvest` · `screenshot-to-code` · `unslop` (CC BY 4.0). Loaded by Claude Code and OpenCode |
+| `AGENTS.md` | agent rules (OpenCode, Codex; Claude Code via `CLAUDE.md`) |
 | `vendor/screenshot-to-code` | upstream app, git submodule (MIT) |
 
 ## Facets

@@ -6,6 +6,9 @@
   "description": "A farm of design languages: facet tokens (palette, depth, shape, type, density), a remixable React component library, and the harvest tooling that grows it from reference images.",
   "main": "ui/index.ts",
   "scripts": {
+    "postinstall": "node tools/setup.mjs",
+    "setup": "node tools/setup.mjs",
+    "doctor": "node tools/setup.mjs --check",
     "dev": "vite",
     "build": "tsc --noEmit && vite build",
     "typecheck": "tsc --noEmit",

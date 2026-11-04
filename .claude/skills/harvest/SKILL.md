@@ -9,8 +9,8 @@ design-farm grows one reference at a time. Each harvest adds **options to indepe
 image multiplies the combinations instead of adding one more copy. Work in this order; do not skip the
 reuse checks.
 
-Load `skills/screenshot-to-code` (fidelity rules and the generate → screenshot → refine loop) and
-`skills/unslop` (taste rules) alongside this one.
+Load the `screenshot-to-code` skill (fidelity rules and the generate → screenshot → refine loop) and the
+`unslop` skill (taste rules) alongside this one. Both sit next to this file in `.claude/skills/`.
 
 ## 0. Before writing any front-end from scratch
 
