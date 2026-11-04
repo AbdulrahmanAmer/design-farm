@@ -33,7 +33,7 @@ illustrations.
 The side rail is two wave caps in a 100×150 box (cap height = 1.5 × width) around a straight body that
 stretches. The list inset comes from `node tools/curve.mjs rail`: it is 0.58 of the cap, which gives 6px of
 clearance for a centred 44px item. The item gap was tightened from 16 to 12px at the owner's request.
-`side-rail.jpg` is the verified render.
+`side-rail.jpg` (local only, gitignored) is the verified render.
 
 ## Deviations
 

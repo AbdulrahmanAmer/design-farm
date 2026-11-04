@@ -20,8 +20,8 @@ in the playground Mixer) before inventing anything. New UI that doesn't reuse th
 ## 1. Register the reference
 
 - Copy the image to `refs/NNN-short-name/reference.<ext>` (next free number).
-- Add it to `registry.json → refs` with title and origin. References are other people's work: internal study
-  only. Never publish them or ship them in a build.
+- Add it to `registry.json → refs` with title and origin. References are other people's work: `.gitignore`
+  keeps `refs/*/` images out of git. Never commit, publish or ship them in a build; commit only `notes.md`.
 
 ## 2. Measure, don't eyeball
 

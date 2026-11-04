@@ -57,4 +57,5 @@ reference image ──► measure (tools/palette.py) ──► facets ──► 
 
 - `vendor/screenshot-to-code`: MIT © Abi Raja.
 - `.claude/skills/unslop`: CC BY 4.0, Damir Sokolovsky. Keep the credit in any adaptation.
-- `refs/`: third-party images for internal study. Do not redistribute.
+- `refs/`: the reference images are third-party work. They are gitignored and never leave your machine; only the
+  measured `notes.md` is committed.

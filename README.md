@@ -42,7 +42,7 @@ applyRecipe(recipes["soft-cobalt"]);                         // or any { palette
 | `tokens/` | `base.css` scales · `facets/{palette,depth,shape,type,density}` · `index.css` · `index.ts` (`applyRecipe`) |
 | `ui/` | component library: primitives, navigation, widgets, illustrations |
 | `playground/` | Vite app: pages rebuilt from refs, gallery, Mixer |
-| `refs/NNN-name/` | reference image + `notes.md` (measured vs shipped, deviations). Internal study only |
+| `refs/NNN-name/` | `notes.md` (measured vs shipped, deviations). The reference image itself stays local (gitignored): it is someone else's work |
 | `registry.json` | refs, facets, recipes, components, provenance |
 | `tools/` | `setup.mjs` (fetch submodule + doctor) · `palette.py` (measure colours) · `curve.mjs` (Bézier geometry) · `shoot.mjs` (screenshot matrix) · `export-css.mjs` (flatten tokens for pages that can't import the farm) · `snippets/` |
 | `.claude/skills/` | `harvest` · `screenshot-to-code` · `unslop` (CC BY 4.0). Loaded by Claude Code and OpenCode |

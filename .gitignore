@@ -3,3 +3,10 @@ dist/
 shots/
 *.log
 .claude/settings.local.json
+
+# Reference images are other people's work: kept locally, never committed. notes.md is committed.
+refs/*/*.png
+refs/*/*.jpg
+refs/*/*.jpeg
+refs/*/*.webp
+refs/*/*.gif

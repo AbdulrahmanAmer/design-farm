@@ -20,7 +20,8 @@ Run `npm run doctor`. If it reports `vendor/screenshot-to-code` missing, run `np
   The entry point is `ui/index.ts`.
 - `playground/`: Vite app (`npm run dev`, port 5178). Pages: dashboard `/`, `#board`, `#components`.
   The **Mixer** sits bottom-right. URL params `?recipe=<name>` or `?palette=…&depth=…&shape=…&type=…&density=…`.
-- `refs/NNN-name/`: reference image and `notes.md`. Internal study only; never publish or bundle.
+- `refs/NNN-name/`: `notes.md` (committed) and the reference image (gitignored, local only). References are other
+  people's work: never commit, publish or bundle the images.
 - `registry.json`: source of truth for refs, facets, recipes, components and their provenance.
 - `tools/`: `setup.mjs` (fetch the submodule, check the environment), `palette.py` (measure colours),
   `curve.mjs` (Bézier geometry), `shoot.mjs` (screenshot matrix), `export-css.mjs` (flatten tokens),
